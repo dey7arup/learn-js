@@ -1,3 +1,4 @@
+const { log } = require('console');
 const crypto = require('crypto');
 
 function hmacSHA256(key, data) {
@@ -18,3 +19,10 @@ console.log(kDate);
 console.log(kRegion);
 console.log(kService);
 console.log(kSigning);
+
+const date = new Date();
+const amzDate = date.toISOString().replace(/[:-]|\.\d{3}/g, '');
+
+console.log(date);
+console.log(amzDate);
+
